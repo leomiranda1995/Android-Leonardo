@@ -76,7 +76,11 @@ public class activity_cadastro extends AppCompatActivity {
     }
 
     public void Cadastrar(View view) {
-        Regist();
+        if (!edtNomeTxt.getText().toString().equals("")){
+            Regist();
+        } else {
+            Toast.makeText(activity_cadastro.this, "Informe todos os campos da tela", Toast.LENGTH_LONG).show();
+        }
     }
 
     private void Regist(){
