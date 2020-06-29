@@ -3,11 +3,22 @@ package com.example.android_leonardo;
 public class CEP {
     private String cep;
     private String logradouro;
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
+    private String complemento;
     private String bairro;
     private String localidade;
     private String uf;
     private String unidade;
     private String ibge;
+    private String gia;
 
     @Override
     public String toString() {
@@ -19,11 +30,10 @@ public class CEP {
                 ", uf='" + uf + '\'' +
                 ", unidade='" + unidade + '\'' +
                 ", ibge='" + ibge + '\'' +
+                ", complemento='" + complemento + '\'' +
                 ", gia='" + gia + '\'' +
                 '}';
     }
-
-    private String gia;
 
     public String getCep() {
         return cep;

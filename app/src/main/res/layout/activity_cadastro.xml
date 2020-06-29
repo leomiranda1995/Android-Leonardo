@@ -8,33 +8,284 @@
     tools:context=".activity_cadastro">
 
     <TextView
+        android:id="@+id/txtNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textColor="#101010"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <EditText
+        android:id="@+id/edtNome"
+        android:layout_width="370dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:hint="Digite seu Nome"
+        android:inputType="none"
+        android:textColor="#131313"
+        android:textColorHint="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+
+
+    <TextView
+        android:id="@+id/txtFone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefone de Contato"
+        android:textColor="#101010"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.151" />
+
+    <EditText
+        android:id="@+id/edtFone"
+        android:layout_width="177dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:hint="Digite seu Nome"
+        android:inputType="none|number"
+        android:textColor="#131313"
+        android:textColorHint="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFone" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="#101010"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.244" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="231dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Digite seu Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#131313"
+        android:textColorHint="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <TextView
+        android:id="@+id/txtSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Sexo"
+        android:textColor="#101010"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.325" />
+
+    <RadioGroup
+        android:id="@+id/rdGroupSexo"
+        android:layout_width="144dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSexo">
+
+        <RadioButton
+            android:id="@+id/rdb_15cm"
+            android:layout_width="140dp"
+            android:layout_height="32dp"
+            android:text="Masculino"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rdGroupSexo" />
+
+        <RadioButton
+            android:id="@+id/rdb_25cm"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Feminino"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rdGroupSexo" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtTiposDeficiencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Tipos de Deficiência"
+        android:textColor="#101010"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47" />
+
+    <CheckBox
+        android:id="@+id/chkFisica"
+        android:layout_width="81dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="4dp"
+        android:text="Física"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTiposDeficiencia" />
+
+    <CheckBox
+        android:id="@+id/chkAuditive"
+        android:layout_width="95dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="4dp"
+        android:text="Auditiva"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTiposDeficiencia" />
+
+    <CheckBox
+        android:id="@+id/chkVisual"
+        android:layout_width="79dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="4dp"
+        android:text="Visual"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTiposDeficiencia" />
+
+    <CheckBox
+        android:id="@+id/chkMental"
+        android:layout_width="91dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="4dp"
+        android:text="Mental"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTiposDeficiencia" />
+
+
+    <TextView
+        android:id="@+id/txtDetalhes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Detalhes da deficiência"
+        android:textColor="#101010"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.567" />
+
+    <EditText
+        android:id="@+id/edtDetalhes"
+        android:layout_width="354dp"
+        android:layout_height="63dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDetalhes" />
+
+    <TextView
         android:id="@+id/cep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Digite seu CEP"
         android:textColor="#101010"
-        android:textSize="36sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.139" />
+        app:layout_constraintVertical_bias="0.702" />
 
     <EditText
         android:id="@+id/edtCep"
-        android:layout_width="297dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="234dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="6dp"
         android:ems="10"
         android:hint="Digite seu CEP"
-        android:inputType="textEmailAddress"
+        android:inputType="number|text"
         android:textColor="#131313"
         android:textColorHint="#FFFFFF"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cep" />
+
+    <Button
+        android:id="@+id/buttonBuscar"
+        android:layout_width="110dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="164dp"
+        android:backgroundTint="#ECEBE8"
+        android:onClick="Buscar"
+        android:text="Buscar"
+        android:textColor="#070707"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/endereco"
@@ -42,42 +293,61 @@
         android:layout_height="wrap_content"
         android:text="Endereço"
         android:textColor="#101010"
-        android:textSize="36sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.616" />
+        app:layout_constraintVertical_bias="0.813" />
 
     <EditText
         android:id="@+id/email2"
-        android:layout_width="297dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="224dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Endereco"
-        android:inputType="textEmailAddress"
+        android:inputType="none"
         android:textColor="#131313"
         android:textColorHint="#FFFFFF"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/endereco" />
 
-    <Button
-        android:id="@+id/buttonBuscar"
-        android:layout_width="217dp"
-        android:layout_height="64dp"
-        android:layout_marginBottom="448dp"
-        android:backgroundTint="#ECEBE8"
-        android:onClick="Buscar"
-        android:text="Buscar"
-        android:textColor="#070707"
-        android:textSize="30sp"
+    <TextView
+        android:id="@+id/txtCidadeUf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cidade"
+        android:textColor="#101010"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.923" />
+
+    <EditText
+        android:id="@+id/edtCidadeUf"
+        android:layout_width="224dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Cidade/Uf"
+        android:inputType="none"
+        android:textColor="#131313"
+        android:textColorHint="#FFFFFF"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCidadeUf" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

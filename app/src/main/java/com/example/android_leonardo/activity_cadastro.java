@@ -11,7 +11,7 @@ import java.util.concurrent.ExecutionException;
 
 public class activity_cadastro extends AppCompatActivity {
 
-    private EditText edtCepTxt, edtEnderecoTxt;
+    private EditText edtCepTxt, edtEnderecoTxt, edtCidadeUfTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class activity_cadastro extends AppCompatActivity {
 
     public void Buscar(View view) {
         edtCepTxt = (EditText) findViewById(R.id.edtCep);
+        edtCidadeUfTxt = (EditText) findViewById(R.id.edtCidadeUf);
         edtEnderecoTxt = (EditText) findViewById(R.id.email2);
         if (edtCepTxt.getText().toString().length() > 0 &&
             !edtCepTxt.getText().toString().equals("") &&
@@ -29,7 +30,8 @@ public class activity_cadastro extends AppCompatActivity {
             HTTPWebServiceLeo serviceLeo = new HTTPWebServiceLeo(edtCepTxt.getText().toString());
             try {
                 CEP retorno = serviceLeo.execute().get();
-                edtEnderecoTxt.setText(retorno.getLocalidade());
+                edtEnderecoTxt.setText(retorno.getLogradouro());
+                edtCidadeUfTxt.setText(retorno.getLocalidade() + "/" + retorno.getUf());
             } catch (InterruptedException e){
                 e.printStackTrace();
             } catch (ExecutionException e){
