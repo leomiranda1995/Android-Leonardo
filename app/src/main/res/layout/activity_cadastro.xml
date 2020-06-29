@@ -125,7 +125,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtSexo">
 
         <RadioButton
-            android:id="@+id/rdb_15cm"
+            android:id="@+id/rdbMasc"
             android:layout_width="140dp"
             android:layout_height="32dp"
             android:text="Masculino"
@@ -136,7 +136,7 @@
             app:layout_constraintTop_toBottomOf="@+id/rdGroupSexo" />
 
         <RadioButton
-            android:id="@+id/rdb_25cm"
+            android:id="@+id/rdbFem"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:text="Feminino"
@@ -176,7 +176,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTiposDeficiencia" />
 
     <CheckBox
-        android:id="@+id/chkAuditive"
+        android:id="@+id/chkAuditiva"
         android:layout_width="95dp"
         android:layout_height="27dp"
         android:layout_marginTop="4dp"
@@ -303,7 +303,7 @@
         app:layout_constraintVertical_bias="0.813" />
 
     <EditText
-        android:id="@+id/email2"
+        android:id="@+id/edtEndereco"
         android:layout_width="224dp"
         android:layout_height="39dp"
         android:layout_marginTop="8dp"
@@ -348,6 +348,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCidadeUf" />
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:onClick="Cadastrar"
+        tools:layout_editor_absoluteX="278dp"
+        tools:layout_editor_absoluteY="654dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
