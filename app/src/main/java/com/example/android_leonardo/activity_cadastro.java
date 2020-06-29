@@ -132,7 +132,7 @@ public class activity_cadastro extends AppCompatActivity {
             public void onResponse(String response) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
-                    Toast.makeText(activity_cadastro.this, "Feitooooooo", Toast.LENGTH_LONG).show();
+                    Toast.makeText(activity_cadastro.this, "Cadastrado com sucesso!", Toast.LENGTH_LONG).show();
 
                 } catch (JSONException e) {
                     Toast.makeText(activity_cadastro.this, "Erro: " + e.getMessage(), Toast.LENGTH_LONG).show();

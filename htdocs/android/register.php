@@ -22,10 +22,11 @@ $sql          = "INSERT INTO cadastro(nome, fone, email, detalhes, cep, cidadeUf
 
 if(mysqli_query($conn, $sql)){
 	$result["sucess"] = "1";
-	$result["message"] = "Sucesso";	
+	$result["message"] = "Sucess";
+	echo json_encode($result);
 } else {
 	$result["sucess"] = "0";
-	$result["message"] = "erro";
+	$result["message"] = "error";
 
 	echo json_encode($result);
 	mysql_close($conn);
